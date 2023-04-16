@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>backgroundColor</title>
+  
+</head>
+<style>
+   @import url('https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap');
+ 
+.container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+     margin-top: 20vw;
+    font-size: 35px;
+   
+
+}
+.btn{
+    font-size: 23px;
+    background-color: black;
+    color: white;
+height: 10vh;
+border-radius: 20px;
+margin-top: 25px;
+}
+.heading{
+    margin-bottom: 25px;
+    font-family: 'Slabo 27px', serif;  
+}
+.container input{
+  font-size: 30px;
+  border-radius: 10px;
+  border: 2px solid black;
+  font-family: 'Slabo 27px', serif;  
+}
+</style>
+<body>
+    <div class="container">
+    <label class="heading" id="mainHeading" for="textInput1">Enter the color to change Background </label>
+    <input type="text" id="textInput1" />
+   <div class="button">
+    
+    <button class="btn" type="button" onclick="getInputValue()">
+        Click To Change Color
+       </button>
+       <button class="btn" type="button2" onclick="removeColor()">
+           Remove Color
+       </button>
+   
+   </div>
+</div>
+    <script>
+      function getInputValue() {
+        let inputValue = document.getElementById("textInput1").value;
+      document.body.style.backgroundColor = inputValue;
+      if(inputValue == 'black'){
+        document.getElementById('mainHeading').style.color = "white";
+      }
+    
+      }
+      function removeColor(){
+        document.body.style.backgroundColor = "White";
+        document.getElementById('mainHeading').style.color = "black";
+       
+      }
+      
+    </script>
+
+</body>
+</html>
